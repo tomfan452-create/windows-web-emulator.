@@ -1,29 +1,17 @@
-# Windows Web Emulator 2.0 — Windows 10 Edition
+# Windows Web Emulator 2.2
 
-Interfaz tipo Windows 10 + acceso al runtime real Wine64/WebAssembly.
+Interfaz estilo Windows 10 para GitHub Pages.
 
-## EXE real
+Incluye accesos directos:
+- VEGAS Pro
+- Roblox
+- Instalar EXE
+- Wine64
+- Este equipo
+- Bloc de notas
+- Chrome
 
-El escritorio no simula la ejecución del EXE. El icono **Wine64** abre
-Boxedwine64, que ejecuta Wine64 x86-64 real en WASM y permite seleccionar
-un `.exe` desde su botón "Run my own .exe".
+El runtime Wine64 se abre mediante Boxedwine64:
+https://andrewnakas.github.io/Boxedwine64/?chunked=1
 
-## GitHub Pages
-
-1. Crea un repositorio.
-2. Sube este ZIP descomprimido.
-3. Settings → Pages → Source: GitHub Actions.
-4. Haz push a `main`.
-5. Abre la URL publicada.
-
-El workflow está incluido.
-
-## Nota técnica
-
-GitHub Pages no permite enviar los headers COOP/COEP directamente. Boxedwine64
-usa `coi-serviceworker.js` para conseguir aislamiento de origen en Pages.
-Su build 64-bit requiere SharedArrayBuffer/Memory64 y actualmente está orientado
-a Chrome/Edge/Safari modernos, con compatibilidad todavía en desarrollo.
-
-Fuente:
-https://github.com/andrewnakas/Boxedwine64
+Importante: por las restricciones de seguridad del navegador, un EXE local no puede pasarse automáticamente desde esta página a otro origen. El usuario debe seleccionarlo dentro de Boxedwine64.
